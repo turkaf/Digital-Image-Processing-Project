@@ -20,7 +20,7 @@
    <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Ultrasonic Image Processing</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -36,7 +36,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="lbl_ID">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -51,10 +51,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="lineEdit_ID"/>
     </item>
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="lbl_name">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -69,10 +69,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit_name"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="lbl_age">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -87,10 +87,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_age"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="lbl_gender">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -105,21 +105,21 @@
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="radioButton_male">
       <property name="text">
        <string>Male</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton_2">
+     <widget class="QRadioButton" name="radioButton_female">
       <property name="text">
        <string>Female</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="lbl_status">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -134,21 +134,21 @@
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton_3">
+     <widget class="QRadioButton" name="radioButton_single">
       <property name="text">
        <string>Single</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton_4">
+     <widget class="QRadioButton" name="radioButton_married">
       <property name="text">
        <string>Married</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="lbl_displaying_selection">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -163,14 +163,14 @@
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="checkBox_contrast">
       <property name="text">
        <string>Contrast Enhanced Image</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox_2">
+     <widget class="QCheckBox" name="checkBox_inverted">
       <property name="text">
        <string>Inverted Image</string>
       </property>
@@ -178,7 +178,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="pushButton_select_patient">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -196,7 +196,7 @@
     <string>Select Patient</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="pushButton_select_image">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -209,7 +209,7 @@
     <string>...</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="lbl_select_image">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -241,7 +241,7 @@
      <number>35</number>
     </property>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="pushButton_save_patient">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -253,7 +253,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pushButton_display_results">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
