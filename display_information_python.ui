@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGraphicsView" name="graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>222</y>
+     <width>251</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>221</y>
+     <width>251</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>540</y>
+     <width>251</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>541</y>
+     <width>251</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>561</width>
+     <height>152</height>
+    </rect>
+   </property>
+   <row>
+    <property name="text">
+     <string>Identity Number</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Patient Name</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Age</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Gender</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </row>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
