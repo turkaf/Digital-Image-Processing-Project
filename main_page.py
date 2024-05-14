@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import *
 from main_page_python import Ui_Form
 from display_information import DisplayInfoPage
-import cv2
+from PyQt5.QtGui import QPixmap
+import os
 
 class MainPage(QWidget):
     def __init__(self) -> None:
@@ -13,13 +14,12 @@ class MainPage(QWidget):
         self.mainForm.pushButton_display_results.clicked.connect(self.DisplayInfo)
 
     def SelectImage(self):
-        filename, _ = QFileDialog.getOpenFileName(self, "Resim Seç", "", "Resim Dosyaları (*.png *.jpg *.jpeg *.bmp)")
-        
-        if filename:
-            image = cv2.imread(filename)
+        file_dialog = QFileDialog()
+        file_path, _ = file_dialog.getOpenFileName(self, 'Open Image', '.', 'Image Files (*.png *.jpg *.jpeg *.bmp)')
+        image_name = os.path.split(file_path)[-1]
+        if file_path:
+            self.mainForm.lbl_select_image.setText(image_name)
 
-            if image is not None:
-                self.mainForm.lbl_select_image.setText("Seçilen Resim: " + filename.split('/')[-1])
 
     def DisplayInfo(self):
         self.hide()
