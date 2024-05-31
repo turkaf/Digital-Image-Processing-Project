@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>850</height>
+    <height>880</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,13 +52,20 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>220</y>
+     <y>250</y>
      <width>251</width>
      <height>281</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>NO IMAGE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -68,13 +75,20 @@
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>220</y>
+     <y>250</y>
      <width>251</width>
      <height>281</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>NO IMAGE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -84,13 +98,20 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>540</y>
+     <y>590</y>
      <width>251</width>
      <height>281</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>NO IMAGE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -100,13 +121,20 @@
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>540</y>
+     <y>590</y>
      <width>251</width>
      <height>281</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>NO IMAGE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -136,6 +164,90 @@
    </property>
    <property name="text">
     <string>New Patient</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>210</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Sans Serif</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Original Image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>210</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Sans Serif</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Result Image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>550</y>
+     <width>182</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Sans Serif</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Enhanced Contrast</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>550</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Sans Serif</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Inverse Image</string>
    </property>
   </widget>
  </widget>
