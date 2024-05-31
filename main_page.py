@@ -96,7 +96,6 @@ class MainPage(QWidget):
 
     # Enhanced contrast function
     def gamma_correction(self, img, c, gamma):
-        # img = img.dtype(float)
         s = c*img**gamma
         s = rescale(s)
         return s
