@@ -6,6 +6,7 @@ from PIL import Image
 import numpy as np
 import os
 import cv2
+from utils import stack, rescale
 
 class MainPage(QWidget):
     def __init__(self) -> None:
@@ -15,6 +16,8 @@ class MainPage(QWidget):
         self.openDisplayInfoPage = DisplayInfoPage()
         self.pixmap = QPixmap()
         self.inverse_pixmap = QPixmap()
+        self.enhanced_pixmap = QPixmap()
+        self.result_pixmap = QPixmap()
         self.mainForm.pushButton_select_image.clicked.connect(self.SelectImage)
         self.mainForm.pushButton_display_results.clicked.connect(self.DisplayInfo)
 
@@ -39,6 +42,10 @@ class MainPage(QWidget):
 
             inverse_image = self.inverse_image(opencv_image)
 
+            enhanced_image = self.gamma_correction(opencv_image, 1, 0.4)
+
+            result_image = self.binary_slicing(opencv_image, 150, 200, 10, 255)
+
             
             #original image parts
             height, width, channel = opencv_image.shape
@@ -53,6 +60,22 @@ class MainPage(QWidget):
             q_image_inverse = QImage(inverse_image.data, width, height, bytesPerLine, QImage.Format_RGB888)
 
             self.inverse_pixmap = QPixmap.fromImage(q_image_inverse).scaled(width, height)
+
+
+            #enhanced image parts
+            height, width, channel = opencv_image.shape
+            bytesPerLine = 3 * width
+            q_enhanced_image = QImage(enhanced_image.data, width, height, bytesPerLine, QImage.Format_RGB888)
+
+            self.enhanced_pixmap = QPixmap.fromImage(q_enhanced_image).scaled(width, height)
+
+
+            #result image parts
+            height, width, channel = opencv_image.shape
+            bytesPerLine = 3 * width
+            q_result_image = QImage(result_image.data, width, height, bytesPerLine, QImage.Format_RGB888)
+
+            self.result_pixmap = QPixmap.fromImage(q_result_image).scaled(width, height)
             
 
     def DisplayInfo(self):
@@ -60,10 +83,28 @@ class MainPage(QWidget):
         self.openDisplayInfoPage.show()
         self.openDisplayInfoPage.displayForm.label_original_image.setPixmap(self.pixmap)
         self.openDisplayInfoPage.displayForm.label_inverse_image.setPixmap(self.inverse_pixmap)
+        self.openDisplayInfoPage.displayForm.label_enhanced_image.setPixmap(self.enhanced_pixmap)
+        self.openDisplayInfoPage.displayForm.label_result_image.setPixmap(self.result_pixmap)
 
 
-    # inverse of image function
+    # Inverse of image function
     def inverse_image(self, img):
         L = np.max(img)
         inverse_img = L - img
         return inverse_img
+    
+
+    # Enhanced contrast function
+    def gamma_correction(self, img, c, gamma):
+        # img = img.dtype(float)
+        s = c*img**gamma
+        s = rescale(s)
+        return s
+    
+
+    # Result function
+    def binary_slicing(self, img, A, B, low_value, high_value):
+        result_img = np.full_like(img, low_value)
+        index = np.logical_and(img > A, img < B)
+        result_img[index] = high_value
+        return result_img
