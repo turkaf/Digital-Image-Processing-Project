@@ -20,6 +20,7 @@ class MainPage(QWidget):
         self.result_pixmap = QPixmap()
         self.mainForm.pushButton_select_image.clicked.connect(self.SelectImage)
         self.mainForm.pushButton_display_results.clicked.connect(self.DisplayInfo)
+        self.openDisplayInfoPage.displayForm.pushButton_2.clicked.connect(self.DisplayMain)
 
 
     def SelectImage(self):
@@ -107,3 +108,9 @@ class MainPage(QWidget):
         index = np.logical_and(img > A, img < B)
         result_img[index] = high_value
         return result_img
+    
+
+    # Close displaying page
+    def DisplayMain(self):
+        self.openDisplayInfoPage.hide()
+        self.show()
