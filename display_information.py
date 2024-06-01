@@ -1,9 +1,7 @@
 from PyQt5.QtWidgets import *
 from display_information_python import Ui_Form
-
-from PyQt5.QtCore import Qt, QSizeF
-from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
-from PyQt5.QtGui import QPixmap, QPainter, QPageSize, QImage
+from PyQt5.QtPrintSupport import QPrinter
+from PyQt5.QtGui import QPainter, QPageSize
 
 class DisplayInfoPage(QWidget):
     def __init__(self) -> None:
