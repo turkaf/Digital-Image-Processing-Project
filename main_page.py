@@ -82,10 +82,27 @@ class MainPage(QWidget):
     def DisplayInfo(self):
         self.hide()
         self.openDisplayInfoPage.show()
+
+        # Tüm görselleri temizle
+        self.openDisplayInfoPage.displayForm.label_original_image.clear()
+        self.openDisplayInfoPage.displayForm.label_result_image.clear()
+        self.openDisplayInfoPage.displayForm.label_enhanced_image.clear()
+        self.openDisplayInfoPage.displayForm.label_inverse_image.clear()
+
         self.openDisplayInfoPage.displayForm.label_original_image.setPixmap(self.pixmap)
-        self.openDisplayInfoPage.displayForm.label_inverse_image.setPixmap(self.inverse_pixmap)
-        self.openDisplayInfoPage.displayForm.label_enhanced_image.setPixmap(self.enhanced_pixmap)
         self.openDisplayInfoPage.displayForm.label_result_image.setPixmap(self.result_pixmap)
+
+        # enhanced_pixmap görseli checkBox_contrast seçiliyse set edilsin
+        if self.mainForm.checkBox_contrast.isChecked():
+            self.openDisplayInfoPage.displayForm.label_enhanced_image.setPixmap(self.enhanced_pixmap)
+        else:
+            self.openDisplayInfoPage.displayForm.label_enhanced_image.setText("No Image")
+
+        # inverse_pixmap görseli checkBox_inverted seçiliyse set edilsin
+        if self.mainForm.checkBox_inverted.isChecked():
+            self.openDisplayInfoPage.displayForm.label_inverse_image.setPixmap(self.inverse_pixmap)
+        else:
+            self.openDisplayInfoPage.displayForm.label_inverse_image.setText("No Image")
 
         identity_number = self.mainForm.lineEdit_ID.text()
         patient_name = self.mainForm.lineEdit_name.text()
