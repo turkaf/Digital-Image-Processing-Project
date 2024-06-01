@@ -114,7 +114,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Display Results"))
         item = self.tableWidget.verticalHeaderItem(0)
         item.setText(_translate("Form", "Identity Number"))
         item = self.tableWidget.verticalHeaderItem(1)
