@@ -128,8 +128,8 @@ class MainPage(QWidget):
         self.openDisplayInfoPage.displayForm.tableWidget.setItem(0, 0, QTableWidgetItem(identity_number))
         self.openDisplayInfoPage.displayForm.tableWidget.setItem(1, 0, QTableWidgetItem(patient_name))
         self.openDisplayInfoPage.displayForm.tableWidget.setItem(2, 0, QTableWidgetItem(age))
-        self.openDisplayInfoPage.displayForm.tableWidget.setItem(3, 0, QTableWidgetItem(gender))
-        self.openDisplayInfoPage.displayForm.tableWidget.setItem(4, 0, QTableWidgetItem(status))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(3, 0, QTableWidgetItem(status))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(4, 0, QTableWidgetItem(gender))
 
 
     # Inverse of image function
