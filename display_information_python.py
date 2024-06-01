@@ -105,6 +105,9 @@ class Ui_Form(object):
         font.setWeight(75)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
+        self.pushButton_print = QtWidgets.QPushButton(Form)
+        self.pushButton_print.setGeometry(QtCore.QRect(20, 10, 131, 23))
+        self.pushButton_print.setObjectName("pushButton_print")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -131,6 +134,7 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "Result Image"))
         self.label_3.setText(_translate("Form", "Enhanced Contrast"))
         self.label_4.setText(_translate("Form", "Inverse Image"))
+        self.pushButton_print.setText(_translate("Form", "Print"))
 
 
 if __name__ == "__main__":
