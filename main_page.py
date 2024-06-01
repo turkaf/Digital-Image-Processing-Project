@@ -87,6 +87,36 @@ class MainPage(QWidget):
         self.openDisplayInfoPage.displayForm.label_enhanced_image.setPixmap(self.enhanced_pixmap)
         self.openDisplayInfoPage.displayForm.label_result_image.setPixmap(self.result_pixmap)
 
+        identity_number = self.mainForm.lineEdit_ID.text()
+        patient_name = self.mainForm.lineEdit_name.text()
+        age = self.mainForm.lineEdit_age.text()
+
+        gender = ""
+        if self.mainForm.radioButton_male.isChecked():
+            gender = "Male"
+        elif self.mainForm.radioButton_female.isChecked():
+            gender = "Female"
+
+        status = ""
+        if self.mainForm.radioButton_single.isChecked():
+            status = "Single"
+        elif self.mainForm.radioButton_married.isChecked():
+            status = "Married"
+
+        self.openDisplayInfoPage.displayForm.tableWidget.setColumnCount(1)
+        self.openDisplayInfoPage.displayForm.tableWidget.setColumnWidth(0, 300)
+
+        horizontal_header = self.openDisplayInfoPage.displayForm.tableWidget.horizontalHeader()
+        horizontal_header.hide()
+
+        self.openDisplayInfoPage.displayForm.tableWidget.setShowGrid(False)
+
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(0, 0, QTableWidgetItem(identity_number))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(1, 0, QTableWidgetItem(patient_name))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(2, 0, QTableWidgetItem(age))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(3, 0, QTableWidgetItem(gender))
+        self.openDisplayInfoPage.displayForm.tableWidget.setItem(4, 0, QTableWidgetItem(status))
+
 
     # Inverse of image function
     def inverse_image(self, img):

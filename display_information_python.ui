@@ -39,12 +39,12 @@
    </row>
    <row>
     <property name="text">
-     <string>Gender</string>
+     <string>Status</string>
     </property>
    </row>
    <row>
     <property name="text">
-     <string>Status</string>
+     <string>Gender</string>
     </property>
    </row>
   </widget>

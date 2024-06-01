@@ -109,6 +109,9 @@
       <property name="text">
        <string>Male</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
      </widget>
     </item>
     <item>
@@ -116,6 +119,9 @@
       <property name="text">
        <string>Female</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
      </widget>
     </item>
     <item>
@@ -138,6 +144,9 @@
       <property name="text">
        <string>Single</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_2</string>
+      </attribute>
      </widget>
     </item>
     <item>
@@ -145,6 +154,9 @@
       <property name="text">
        <string>Married</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_2</string>
+      </attribute>
      </widget>
     </item>
     <item>
@@ -239,4 +251,8 @@
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
 </ui>
